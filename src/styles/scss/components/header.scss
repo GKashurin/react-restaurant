@@ -1,0 +1,36 @@
+.header {
+  margin-bottom: 130px;
+  @media (max-width: 1366px) {
+    margin-bottom: 80px;
+  }
+  @media (max-width: 1024px) {
+    margin-bottom: 50px;
+  }
+
+  .container {
+    padding: 35px 118px 0 102px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1366px) {
+      padding: 35px 30px 0 30px;
+    }
+  }
+
+  &__decor {
+    span {
+      display: inline-block;
+      background-color: $red;
+      width: 14px;
+      height: 17px;
+      margin-right: 14px;
+      transform: translateY(-35px);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}

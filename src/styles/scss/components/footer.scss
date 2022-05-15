@@ -1,0 +1,140 @@
+.footer {
+  &__decor {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+
+    span {
+      display: inline-block;
+      background-color: $red;
+      width: 32px;
+      height: 72px;
+      margin-right: 32px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 130px;
+    @media (max-width: 768px) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 530px) {
+      display: none;
+    }
+
+  }
+
+  .container {
+    padding: 0 100px 0 96px;
+    @media (max-width: 1366px) {
+      padding: 0 30px;
+    }
+  }
+}
+
+.footer-list {
+  &__title {
+    margin-bottom: 23px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    @media (max-width: 1024px) {
+      font-size: 23px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+
+    @media (max-width: 1024px) {
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.circle {
+  background-color: #c4c4c4;
+  flex: 0 1 227px;
+  margin-top: 20px;
+  border-radius: 50%;
+  @media (max-width: 1024px) {
+    flex: 0 1 215px;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.media {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 530px) {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+  &__item {
+    flex: 1 1 33.333%;
+    @media (max-width: 768px) {
+      &:first-child {
+        display: none;
+      }
+    }
+  }
+
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
+  @media (max-width: 530px) {
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.stores {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  a {
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import "fonts";
+@import "variables";
+@import "normalize";
+@import "components/all";
+
+body {
+  background-color: $background;
+  padding: 30px;
+}
+
+.wrapper {
+  width: calc(100vw - 70px);
+  height: 100%;
+  background-color: white;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding-bottom: 60px;
+  @media (max-width: 530px) {
+    padding-bottom: 20px;
+  }
+}
+
+.content {
+  &__container {
+    padding: 0 92px 0 96px;
+    @media (max-width: 1366px) {
+      padding: 0 30px;
+    }
+  }
+}
+
+.button--circle {
+  cursor: pointer;
+}
+
+.button__cart {
+  cursor: pointer;
+  font-family: "Cera Condensed Pro";
+  background-color: $red;
+  width: 90px;
+  height: 36px;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+
+  span {
+    margin-right: 6px;
+  }
+
+  &:hover {
+    background-color: darken($red, 8%);
+  }
+}

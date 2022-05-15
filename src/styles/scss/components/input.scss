@@ -1,0 +1,52 @@
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  &:first-child {
+    margin-right: 43px;
+    @media (max-width: 768px) {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  }
+
+  label {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    margin-right: 12px;
+    @media (max-width: 768px) {
+      width: 95px;
+      font-size: 28px;
+    }
+     @media (max-width: 480px) {
+      display: none;
+    }
+  }
+
+  input {
+    background-color: $grey-bg;
+    border: none;
+    height: 42px;
+    border-radius: 4px;
+    padding: 10px 16px;
+    @media (max-width: 768px) {
+      height: 38px;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    &::placeholder {
+      font-family: Abel;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}

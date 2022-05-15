@@ -1,0 +1,149 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "burgers",
+      "products": [
+        {
+          "id": 0,
+          "name": "Месть мясника",
+          "price": 395,
+          "delivery": true,
+          "img": "https://cdn7.arora.pro/f/upload/scale/240/0/2/f6a5beb4-2a30-46ba-9425-2ecc283dd46c/size-2/711c85d6-b6a3-4673-8740-ab91013c2236.jpg?version=P605.50&webp&avif",
+          "isNew": false,
+          "isHit": false
+        },
+        {
+          "id": 1,
+          "name": "Кубанская курочка",
+          "price": 495,
+          "delivery": false,
+          "img": "https://cdn3.arora.pro/f/upload/scale/240/0/2/f6a5beb4-2a30-46ba-9425-2ecc283dd46c/size-2/e25e46b0-9627-4e65-a663-ab91013c42b1.jpg?version=P605.50&webp&avif",
+          "isNew": true,
+          "isHit": false
+        },
+        {
+          "id": 2,
+          "name": "Вителло Тоннато",
+          "price": 325,
+          "delivery": true,
+          "img": "https://cdn5.arora.pro/f/upload/scale/240/0/2/f6a5beb4-2a30-46ba-9425-2ecc283dd46c/size-2/a7823d19-15f5-4093-ad99-ae1a00bd84d7.jpg?version=P605.50&webp&avif",
+          "isNew": false,
+          "isHit": true
+        },
+        {
+          "id": 3,
+          "name": "Федор",
+          "price": 295,
+          "delivery": true,
+          "img": "https://cdn4.arora.pro/f/upload/scale/240/0/2/f6a5beb4-2a30-46ba-9425-2ecc283dd46c/size-2/f65dbc5e-83c4-49f4-8162-abc7008314fb.jpg?version=P605.50&webp&avif",
+          "isNew": false,
+          "isHit": false
+        },
+        {
+          "id": 4,
+          "name": "#Ростовпапа",
+          "price": 385,
+          "delivery": false,
+          "img": "https://cdn4.arora.pro/f/upload/scale/240/0/2/f6a5beb4-2a30-46ba-9425-2ecc283dd46c/size-2/82cffc66-bd25-4084-9ee7-ab91013c8539.jpg?version=P605.50&webp&avif",
+          "isNew": false,
+          "isHit": false
+        },
+        {
+          "id": 5,
+          "name": "Биф-черри",
+          "price": 395,
+          "delivery": true,
+          "img": "https://cdn8.arora.pro/f/upload/scale/240/0/2/f6a5beb4-2a30-46ba-9425-2ecc283dd46c/size-2/32c2c8b5-5291-401a-ad84-ab91013cfaa4.jpg?version=P605.50&webp&avif",
+          "isNew": true,
+          "isHit": false
+        },
+        {
+          "id": 6,
+          "name": "Казак",
+          "price": 495,
+          "delivery": false,
+          "img": "https://cdn1.arora.pro/f/upload/scale/240/0/2/f6a5beb4-2a30-46ba-9425-2ecc283dd46c/size-2/e5f861fb-4006-4f37-a308-ab91013c5ac6.jpg?version=P605.50&webp&avif",
+          "isNew": true,
+          "isHit": false
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "snacks",
+      "products": [
+        {
+          "id": 0,
+          "name": "Батат с сыром Фета",
+          "price": 395,
+          "delivery": true,
+          "img": "https://cdn11.arora.pro/f/upload/scale/270/0/2/f6a5beb4-2a30-46ba-9425-2ecc283dd46c/size-2/2d784ca7-c194-4662-930a-ae1a00c7518c.jpg?version=P605.50&webp&avif",
+          "isNew": false,
+          "isHit": false
+        },
+        {
+          "id": 1,
+          "name": "Картофель фри",
+          "price": 495,
+          "delivery": false,
+          "img": "https://cdn9.arora.pro/f/upload/scale/270/0/2/f6a5beb4-2a30-46ba-9425-2ecc283dd46c/size-2/295ef904-5274-4df4-ae07-abab00a3340c.jpg?version=P605.50&webp&avif",
+          "isNew": true,
+          "isHit": false
+        },
+        {
+          "id": 2,
+          "name": "Картофель фри чесночный",
+          "price": 325,
+          "delivery": true,
+          "img": "https://cdn8.arora.pro/f/upload/scale/270/0/2/f6a5beb4-2a30-46ba-9425-2ecc283dd46c/size-2/c4cfcfc1-03b6-45c3-b4e4-abbf0086ef95.jpg?version=P605.50&webp&avif",
+          "isNew": false,
+          "isHit": true
+        },
+        {
+          "id": 3,
+          "name": "Картофель по-деревенски",
+          "price": 295,
+          "delivery": true,
+          "img": "https://cdn7.arora.pro/f/upload/scale/270/0/2/f6a5beb4-2a30-46ba-9425-2ecc283dd46c/size-2/e6e31b97-0285-431c-9d64-abab00a365f7.jpg?version=P605.50&webp&avif",
+          "isNew": false,
+          "isHit": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "drinks",
+      "products": [
+        {
+          "id": 0,
+          "name": "Space Watermelon Splash - арбуз",
+          "price": 395,
+          "delivery": true,
+          "img": "https://cdn5.arora.pro/f/upload/scale/270/0/2/f6a5beb4-2a30-46ba-9425-2ecc283dd46c/size-2/15e88c1d-3f5e-421e-8837-ae2a00d099b9.jpg?version=P605.50&webp&avif",
+          "isNew": false,
+          "isHit": false
+        },
+        {
+          "id": 1,
+          "name": "Dr. Pepper",
+          "price": 495,
+          "delivery": false,
+          "img": "https://cdn0.arora.pro/f/upload/scale/270/0/2/f6a5beb4-2a30-46ba-9425-2ecc283dd46c/size-2/53beaea6-ab47-4e19-9993-abab00a4ecd1.jpg?version=P605.50&webp&avif",
+          "isNew": true,
+          "isHit": false
+        },
+        {
+          "id": 2,
+          "name": "Space Pineapple Splash - ананас",
+          "price": 325,
+          "delivery": true,
+          "img": "https://cdn8.arora.pro/f/upload/scale/270/0/2/f6a5beb4-2a30-46ba-9425-2ecc283dd46c/size-2/b8d78629-c866-472f-aa6c-ae2a00d0bb72.jpg?version=P605.50&webp&avif",
+          "isNew": false,
+          "isHit": true
+        }
+      ]
+    }
+  ]
+}
+
