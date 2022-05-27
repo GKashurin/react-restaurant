@@ -9,9 +9,9 @@ function handleIntersections(entries) {
 		if (listenerCallbacks.has(entry.target)) {
 			let cb = listenerCallbacks.get(entry.target);
 
-			if (entry.isIntersecting || entry.intersectionRatio > 0) {
-				observer.unobserve(entry.target);
-				listenerCallbacks.delete(entry.target);
+			if (entry.isIntersecting || entry.intersectionRatio > 0.5) {
+				// observer.unobserve(entry.target);
+				// listenerCallbacks.delete(entry.target);
 				cb();
 			}
 		}

@@ -25,14 +25,7 @@ const Home = ({cartItems, categories}) => {
 			<div className="content__container">
 				<Delivery/>
 			</div>
-			{/*{categories?.map(item => (*/}
-			{/*	<div>*/}
-			{/*		*/}
-			{/*	</div>))}*/}
-			<Navigation
-				items={categories}
-				activeCategory={activeCategory}
-			/>
+			<Navigation activeCategory={activeCategory}/>
 			<div className="products">
 				<div className="content__container">
 					{categories?.map(category => (

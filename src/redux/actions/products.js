@@ -8,7 +8,7 @@ export const setLoaded = payload => ({
 
 export const fetchProducts = () => dispatch => {
 	dispatch(setLoaded(true))
-	fetch("http://localhost:3001/db.json")
+	fetch("http://localhost:3000/db.json")
 		.then(resp => resp.json())
 		.then(data => {
 			dispatch(setProducts(data.categories));
