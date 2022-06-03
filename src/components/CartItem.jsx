@@ -1,28 +1,37 @@
 import React from "react";
 import {useDispatch} from "react-redux";
-import {addProductToCart, minusCartItem, removeCartItem} from "../redux/actions/cart";
+import {addProductToCart, minusCartItem, removeCartItem} from "../redux/reducers/cartSlice";
 
 const CartItem = ({product, count, category}) => {
 
 	const dispatch = useDispatch()
 	const removeProduct = () => {
-		dispatch(removeCartItem(category, product));
+		dispatch(removeCartItem({
+			key: category,
+			value: product
+		}));
 	};
 	const handlePlusItem = () => {
-		dispatch(addProductToCart(category, product));
+		dispatch(addProductToCart({
+			key: category,
+			value: product
+		}));
 	};
 	const handleMinusItem = () => {
-		dispatch(minusCartItem(category, product))
+		dispatch(minusCartItem({
+			key: category,
+			value: product
+		}))
 	};
 
 	return (
 		<div className="cart__item">
 			<div className="cart__item-img">
-				{/*<img*/}
-				{/*	className="cats-block__image"*/}
-				{/*	src={imageUrl}*/}
-				{/*	alt="Cat"*/}
-				{/*/>*/}
+				<img
+					className="cats-block__image"
+					src={product.img}
+					alt="img"
+				/>
 			</div>
 			<div className="cart__item-info">
 				<h3>{product.name}</h3>

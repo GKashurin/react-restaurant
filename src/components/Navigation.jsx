@@ -2,7 +2,6 @@ import React, {useMemo} from "react";
 
 const Navigation = React.memo(({activeCategory}) => {
 	const categories = useMemo(() => ["Бургеры", "Снэки", "Напитки", "Твистеры", "Курица", "Баскеты", "Соусы", "Кофе и чай", "Десерты", "Хиты по 50", "Хиты по 99"], []);
-	console.log(activeCategory)
 	return (
 		<div className="categories">
 			<nav className="categories__nav">

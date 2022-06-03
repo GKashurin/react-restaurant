@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import cartEmptyImage from "../assets/empty-cart.png"
 import CartItem from "../components/CartItem";
-import {clearCart} from "../redux/actions/cart";
+import {clearCart} from "../redux/reducers/cartSlice";
 
 const Cart = ({cartItems, categoryNames}) => {
 	const {totalPrice, totalCount} = useSelector(state => state.cart);
@@ -116,7 +116,7 @@ const Cart = ({cartItems, categoryNames}) => {
 							<span>Сумма заказа: <b>{totalPrice} ₽</b></span>
 						</div>
 						<div className="cart__bottom-buttons">
-							<a href="/" className="button button--outline button--add go-back-btn">
+							<Link to="/" className="button button--outline button--add go-back-btn">
 								<svg
 									width="8"
 									height="14"
@@ -131,10 +131,8 @@ const Cart = ({cartItems, categoryNames}) => {
 										strokeLinejoin="round"
 									/>
 								</svg>
-								<Link to="/">
-									<span>Вернуться назад</span>
-								</Link>
-							</a>
+								<span>Вернуться назад</span>
+							</Link>
 						</div>
 					</div>
 				</div>

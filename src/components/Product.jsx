@@ -1,5 +1,5 @@
 import React, {useRef, useState} from "react";
-import {addProductToCart, minusCartItem} from "../redux/actions/cart";
+import {addProductToCart, minusCartItem} from "../redux/reducers/cartSlice";
 import {useDispatch} from "react-redux";
 import {useIntersection} from "../hooks/useIntersectionObserver";
 
@@ -11,7 +11,6 @@ const Product = ({product, category, cartItems, setActiveCategory, getCategoryNa
 	useIntersection(imgRef, () => {
 		setIsInView(true);
 		setActiveCategory(getCategoryName(imgRef.current.parentElement.id))
-		// console.log(getCategoryName(imgRef.current.parentElement.id))
 	});
 
 	return (
@@ -42,18 +41,27 @@ const Product = ({product, category, cartItems, setActiveCategory, getCategoryNa
 				? <div
 					className="product__mark product__mark_plus"
 					role="button"
-					onClick={() => dispatch(addProductToCart(category, product))}
+					onClick={() => dispatch(addProductToCart({
+						key: category,
+						value: product
+					}))}
 				>+
 				</div>
 				: <div className="product__counter">
 					<span
-						onClick={() => dispatch(minusCartItem(category, product))}
+						onClick={() => dispatch(minusCartItem({
+							key: category,
+							value: product
+						}))}
 						role="button"
 					>-
 					</span>
 					<span>{cartItems[category][product.id]?.length}</span>
 					<span
-						onClick={() => dispatch(addProductToCart(category, product))}
+						onClick={() => dispatch(addProductToCart({
+							key: category,
+							value: product
+						}))}
 						role="button"
 					>+
 					</span>

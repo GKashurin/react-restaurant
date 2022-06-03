@@ -178,6 +178,7 @@
         justify-content: center;
         width: 210px;
         padding: 10px;
+        border-radius: 10px;
 
         border-color: darken($color: #f6f6f6, $amount: 10);
 
@@ -227,11 +228,6 @@
       line-height: 145.4%;
       letter-spacing: 0.01em;
       color: #777777;
-    }
-
-    icon {
-      position: relative;
-      top: 2px;
     }
 
     img {
