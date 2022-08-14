@@ -4,11 +4,11 @@ import {fetchProducts} from "../actions/products";
 const initialState = {
 	items: [],
 	isLoaded: false,
-	error: ''
+	error: ""
 };
 
 export const products = createSlice({
-	name: 'products',
+	name: "products",
 	initialState,
 	reducers: {},
 	extraReducers: {

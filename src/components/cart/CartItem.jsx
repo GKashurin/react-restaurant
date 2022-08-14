@@ -1,8 +1,8 @@
 import React from "react";
 import {useDispatch} from "react-redux";
-import {addProductToCart, minusCartItem, removeCartItem} from "../redux/reducers/cartSlice";
+import {addProductToCart, minusCartItem, removeCartItem} from "../../redux/reducers/cartSlice";
 
-const CartItem = ({product, count, category}) => {
+export const CartItem = ({product, count, category}) => {
 
 	const dispatch = useDispatch()
 	const removeProduct = () => {
@@ -104,5 +104,3 @@ const CartItem = ({product, count, category}) => {
 		</div>
 	);
 };
-
-export default CartItem;

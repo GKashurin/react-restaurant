@@ -1,6 +1,6 @@
 import React from "react";
 
-const FooterNavList = () => {
+export const FooterNavList = () => {
 	return (
 		<ul className="footer__nav-list footer-list">
 			<h5 className="footer-list__title">Раздел 1</h5>
@@ -12,5 +12,3 @@ const FooterNavList = () => {
 		</ul>
 	);
 };
-
-export default FooterNavList;

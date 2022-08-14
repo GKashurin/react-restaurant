@@ -4,7 +4,7 @@ import burgerIcon from "../assets/BurgerMenu.svg";
 import cartIcon from "../assets/Basket.svg";
 import {useSelector} from "react-redux";
 
-const Header = () => {
+export const Header = () => {
 	const totalPrice = useSelector(state => state.cart.totalPrice);
 	return (
 		<header className="header">
@@ -33,5 +33,3 @@ const Header = () => {
 		</header>
 	);
 };
-
-export default Header;

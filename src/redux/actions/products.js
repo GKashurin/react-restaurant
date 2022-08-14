@@ -1,8 +1,8 @@
-import axios from 'axios'
-import { createAsyncThunk } from '@reduxjs/toolkit'
+import axios from "axios"
+import { createAsyncThunk } from "@reduxjs/toolkit"
 
 export const fetchProducts = createAsyncThunk(
-	'products/fetch',
+	"products/fetch",
 	(_, { rejectWithValue }) =>
 		axios
 			.get("http://localhost:3000/db.json")

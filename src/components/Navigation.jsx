@@ -1,7 +1,8 @@
-import React, {useMemo} from "react";
+import React from "react";
 
-const Navigation = React.memo(({activeCategory}) => {
-	const categories = useMemo(() => ["Бургеры", "Снэки", "Напитки", "Твистеры", "Курица", "Баскеты", "Соусы", "Кофе и чай", "Десерты", "Хиты по 50", "Хиты по 99"], []);
+const categories = ["Бургеры", "Снэки", "Напитки", "Твистеры", "Курица", "Баскеты", "Соусы", "Кофе и чай", "Десерты", "Хиты по 50", "Хиты по 99"]
+
+export const Navigation = ({activeCategory}) => {
 	return (
 		<div className="categories">
 			<nav className="categories__nav">
@@ -17,6 +18,4 @@ const Navigation = React.memo(({activeCategory}) => {
 			</nav>
 		</div>
 	);
-});
-
-export default Navigation;
+};

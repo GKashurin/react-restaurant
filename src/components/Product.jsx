@@ -3,7 +3,7 @@ import {addProductToCart, minusCartItem} from "../redux/reducers/cartSlice";
 import {useDispatch} from "react-redux";
 import {useIntersection} from "../hooks/useIntersectionObserver";
 
-const Product = ({product, category, cartItems, setActiveCategory, getCategoryName}) => {
+export const Product = ({product, category, cartItems, setActiveCategory, getCategoryName}) => {
 	const [isInView, setIsInView] = useState(false);
 	const dispatch = useDispatch()
 
@@ -69,5 +69,3 @@ const Product = ({product, category, cartItems, setActiveCategory, getCategoryNa
 		</li>
 	);
 };
-
-export default Product;

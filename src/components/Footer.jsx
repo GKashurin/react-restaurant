@@ -1,5 +1,5 @@
 import React from "react";
-import FooterNavList from "./FooterNavList";
+import {FooterNavList} from "./FooterNavList";
 import vk from "../assets/vk.svg"
 import fb from "../assets/fb.svg"
 import tw from "../assets/tw.svg"
@@ -7,7 +7,7 @@ import ok from "../assets/ok.svg"
 import gPlay from "../assets/Gplay.png"
 import appStore from "../assets/App_Store.png"
 
-const Footer = () => {
+export const Footer = () => {
 	return (
 		<footer className="footer">
 			<div className="container">
@@ -50,11 +50,9 @@ const Footer = () => {
 					<div className="media__item stores">
 						<a href="">
 							<img src={gPlay} alt="Google play"/>
-
 						</a>
 						<a href="">
 							<img src={appStore} alt="App store"/>
-
 						</a>
 					</div>
 				</div>
@@ -62,5 +60,3 @@ const Footer = () => {
 		</footer>
 	);
 };
-
-export default Footer;
