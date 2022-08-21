@@ -1,7 +1,7 @@
 import React, {memo} from 'react';
-import Sort from "./Sort";
-import {Product} from "./Product";
 import {useSelector} from "react-redux";
+import {Sort} from "./Sort";
+import {Product} from "./Product";
 import {allCategories, itemsInCart} from "../redux/selectors";
 
 const getCategoryName = (name) => {
@@ -20,7 +20,7 @@ const Products = ({setActiveCategory}) => { // c memo 2 рендера, без m
 				{categories?.map(category => (
 					<div key={category.id}>
 						<h3 className="products__title">{getCategoryName(category.name)}</h3>
-						{/*<Sort filter={filter} setFilter={setFilter}/>*/}
+						<Sort id={category.id} />
 						<ul
 							className="products__list"
 							id={category.name}

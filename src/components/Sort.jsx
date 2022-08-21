@@ -1,18 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
+import {useDispatch} from "react-redux";
+import {sortProducts} from "../redux/reducers/productsSlice"
 import {Select} from "./UI/Select";
 
-const Sort = ({filter, setFilter}) => {
+export const Sort = ({id}) => {
+	const [filter, setFilter] = useState({sort: ""})
+	const dispatch = useDispatch()
+
+	const onSort = (e) => {
+		setFilter({...filter, sort: e});
+		dispatch(sortProducts({
+			sort: e, 
+			id
+		}))
+	}
 	return (
 		<Select
 			value={filter.sort}
-			onChange={selectedSort => setFilter({...filter, sort: selectedSort})}
+			onChange={selectedSort => onSort(selectedSort)}
 			defaultValue="Сортировка по"
 			options={[
-				{value: "title", name: "По названию"},
+				{value: "name", name: "По названию"},
 				{value: "price", name: "По цене"},
 			]}
 		/>
 	);
 };
-
-export default Sort;

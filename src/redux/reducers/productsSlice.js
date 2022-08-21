@@ -4,13 +4,30 @@ import {fetchProducts} from "../actions/products";
 const initialState = {
 	items: [],
 	isLoaded: false,
-	error: ""
+	error: "",
 };
 
 export const products = createSlice({
 	name: "products",
 	initialState,
-	reducers: {},
+	reducers: {
+		sortProducts(state, action) {
+			const {sort, id} = action.payload;
+			const targetCategory = state.items.find(item => item.id === id)
+			const sortedCategory = {
+				...targetCategory,
+				products: targetCategory.products.sort((a, b) => {
+					const prepareObj = (obj) => {
+						obj.price = obj.price.toString()
+						return obj
+					}
+					return prepareObj(a)[sort].localeCompare(prepareObj(b)[sort])
+				})
+			}
+			state.items = state.items.map(category => category.id === id ? sortedCategory : category)
+		}
+	},
+
 	extraReducers: {
 		[fetchProducts.pending.type]: (state) => {
 			state.isLoaded = true
@@ -25,5 +42,6 @@ export const products = createSlice({
 		},
 	}
 })
-const { reducer } = products;
+const { actions, reducer } = products;
+export const { sortProducts } = actions
 export default reducer;
