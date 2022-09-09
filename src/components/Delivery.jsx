@@ -1,7 +1,7 @@
-import React from "react";
+import React, {memo} from "react";
 import {Input} from "./UI/Input";
 
-export const Delivery = () => {
+const Delivery = () => {
 	return (
 		<div className="content__container">
 			<div className="delivery">
@@ -29,3 +29,5 @@ export const Delivery = () => {
 		</div>
 	);
 };
+
+export const MemoDelivery = memo(Delivery)

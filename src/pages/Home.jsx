@@ -1,25 +1,24 @@
-import React, {useEffect, useState} from "react";
-import {useDispatch} from "react-redux";
-import {Delivery} from "../components/Delivery";
-import {Navigation} from "../components/Navigation";
-import {fetchProducts} from "../redux/actions/products";
+import React, {useState, useCallback} from "react";
+import {MemoDelivery} from "../components/Delivery";
+import {MemoNavigation} from "../components/Navigation";
 import {Footer} from "../components/Footer";
 import {MemoProducts} from "../components/Products";
+import {Input} from "../components/UI/Input";
 
 export const Home = () => {
-	const [activeCategory, setActiveCategory] = useState()
-	const dispatch = useDispatch()
+  const [activeCategory, setActiveCategory] = useState("");
+  const [query, setQuery] = useState("");
+  const changeHandler = useCallback((e) => {
+    setQuery(e.target.value);
+  }, []);
 
-	useEffect(() => {
-		dispatch(fetchProducts())
-	}, [])
-
-	return (
-		<>
-			<Delivery/>
-			<Navigation activeCategory={activeCategory}/>
-			<MemoProducts setActiveCategory={setActiveCategory}/>
-			<Footer/>
-		</>
-	);
+  return (
+    <>
+      <MemoDelivery />
+      <Input placeholder="Поиск" value={query} onChange={changeHandler} />
+      <MemoNavigation activeCategory={activeCategory} />
+      <MemoProducts setActiveCategory={setActiveCategory} query={query} />
+      <Footer />
+    </>
+  );
 };

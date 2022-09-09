@@ -1,10 +1,9 @@
-import React from "react";
+import React, {memo} from "react";
 
 const categories = ["Бургеры", "Снэки", "Напитки", "Твистеры", "Курица", "Баскеты", "Соусы", "Кофе и чай", "Десерты", "Хиты по 50", "Хиты по 99"]
 
-export const Navigation = ({activeCategory}) => {
-	return (
-		<div className="categories">
+const Navigation = ({activeCategory}) => (
+	<div className="categories">
 			<nav className="categories__nav">
 				<ul className="categories__list">
 					{categories.map(category =>
@@ -17,5 +16,5 @@ export const Navigation = ({activeCategory}) => {
 				</ul>
 			</nav>
 		</div>
-	);
-};
+);
+export const MemoNavigation = memo(Navigation)

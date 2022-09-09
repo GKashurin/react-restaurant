@@ -1,12 +1,12 @@
 import React from "react";
 
-export const Input = ({label, placeholder}) => {
+export const Input = (props) => {
 	return (
 		<div className="input-wrapper">
-			<label>{label}</label>
+			<label>{props.label}</label>
 			<input
 				type="text"
-				placeholder={placeholder}
+				{...props}
 			/>
 		</div>
 	);
